@@ -4,9 +4,9 @@ namespace TestableSample3.Lib
 {
     public class TaskWrapper : ITaskWrapper
     {
-        public async Task Delay(int milliseconds)
+        public Task Delay(int milliseconds)
         {
-            await Task.Delay(milliseconds);
+            return Task.Delay(milliseconds);
         }
     }
 }

@@ -21,8 +21,8 @@ namespace TestableSample3.App
 
             foreach (var tv in typedValues)
             {
-                await Task.Delay(1000);
-                ConsoleWrapper.WriteLine(tv);
+                await TaskWrapper.Delay(1000);
+                ConsoleWrapper.WriteLine(tv.ToString());
             }
         }
 

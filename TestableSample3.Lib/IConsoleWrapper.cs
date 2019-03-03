@@ -4,6 +4,6 @@ namespace TestableSample3.Lib
     public interface IConsoleWrapper
     {
         string ReadLine (string message);
-        void   WriteLine(object obj);
+        void   WriteLine(string str);
     }
 }

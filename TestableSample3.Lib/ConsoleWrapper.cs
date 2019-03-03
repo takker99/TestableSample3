@@ -14,9 +14,9 @@ namespace TestableSample3.Lib
             return Console.ReadLine();
         }
 
-        public void WriteLine(object obj)
+        public void WriteLine(string str)
         {
-            Console.WriteLine(obj);
+            Console.WriteLine(str);
         }
     }
 }
