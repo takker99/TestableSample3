@@ -1,12 +1,20 @@
-﻿using System;
+﻿using System.Threading.Tasks;
+using Unity;
+using TestableSample3.Lib;
 
 namespace TestableSample3.App
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var container = new UnityContainer();
+            container.RegisterType<IConsoleWrapper, ConsoleWrapper>();
+            container.RegisterType<ITaskWrapper   , TaskWrapper   >();
+            container.RegisterType<MainFlow>();
+
+            var mainFlow = container.Resolve<MainFlow>();
+            await mainFlow.Run();
         }
     }
 }
