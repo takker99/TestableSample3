@@ -38,8 +38,7 @@ namespace TestableSample3.Test
             var typedValue = new TypedValue(value);
             var str = typedValue.ToString();
 
-            Assert.Contains(expectedValue, str);
-            Assert.Contains(expectedType , str);
+            Assert.Equal($"{expectedValue} : {expectedType}", str);
         }
 
         public static IEnumerable<object[]> ToString_Data()
